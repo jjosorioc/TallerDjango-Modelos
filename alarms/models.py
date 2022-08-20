@@ -7,4 +7,4 @@ class Alarm(models.Model):
     measurements = models.ManyToManyField(Measurement,verbose_name="measurements")
     
     def __str__(self) -> str:
-        return "{0}: {1}".format(self.name, self.measurements)
+        return "{0}: {1}".format(self.name, repr(self.measurements.all()))
