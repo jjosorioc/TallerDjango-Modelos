@@ -8,5 +8,5 @@ class Measurement(models.Model):
     unit=models.CharField(max_length=50)
     place=models.CharField(max_length=50)
     dateTime=models.DateTimeField(auto_now_add=True)
-    def __str__(self):
+    def __str__(self) -> str:
         return '%s %s' %(self.value,self.unit)
